@@ -1,0 +1,77 @@
+/*Welcome to your .css file! This is where we'll be applying most of our graphics stuff*/
+/*If you'd like to fit this all in your .html, I BELIEVE you can just use <style></style> like all other things.*/
+
+/*Let's start by setting the font we'd like to use.*/
+@font-face{
+    font-family: "rahlscript"; /*This states what the font is called,*/
+    src: url("https://pastelli-games.github.io/fonts/rahlscript.ttf"); /*And this says where to find it.*/
+} 
+
+body{ /*Now let's start with the body, AKA everything in this case, since my header's within the body.*/
+    background-color: #000000; /*This sets a background color behind my image/gif. Useful of something breaks!*/
+    background: url("img/backgroundtile.gif.gif"); /* Setting a background image. Mine's a 32x32 gif so I don't need to size here.*/
+    font-family: "rahlscript"; /*using the font name defined previously will now apply here. My eyes are bleeding.*/
+}
+
+.container{ /*Now we'll work on everything on the front.*/
+    width: 1280px; /*Saying how wide this box will be. 1280x720 users might not be able to see the outside line in my case.*/
+    margin: 0px auto; /*You can manually set it or let it automagically set. Magiiiic*/
+    border: 3px solid#000000; /*Setting a 3px line around the box. There are other units of measurement. I use pixels.*/
+    display:flex; /*Telling it to use a 'flexbox'.*/
+    justify-content: center;
+    align-items: center;
+}
+
+.box{ /*. We don't need to use flex for this.*/
+    width: 1280px;
+    background-color: #000000;
+    color: #ccffff; /*setting the font color*/
+    border: 3px solid #000000
+}
+
+.header{ /*Setting graphics for our header*/
+    display:flex; /*using flex since there's a good amount of space up here. May be used later.*/
+    flex-direction: row; /*using flex-direction, we can tell flex that any other div placed in 'header' should be placed to the _ of the one above.*/
+    justify-content: flex-start; /* Reinforces this^ */
+    align-items: left; /*should be oriented to the left.*/
+    border-bottom: 3px solid #000000;
+    background: url("https://pastelli-games.git hub.io/img/blocktile.gif");
+    
+}
+
+.headertextbox{
+    padding-left: 10px; /*Adding some padding to either side.*/
+    padding-right: 10px;
+    border-right: 3px solid #000000; /*Putting a divider here to finish the section.*/
+    background-color: #000000;
+}
+
+.headertext{
+    font-size: 40px;
+}
+/*Setting up the main box with flex for blog-posty content*/
+.mainbox{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: left;
+    background-color: #020303;
+}
+
+.post{
+    border-bottom: 3px solid #ffffff;
+}
+
+.posttitle{
+border-bottom:3px solid #ececec;
+}
+
+.posttitle p{
+    margin: 10px;
+    font-size: 32px;
+}
+
+.postcontent p{
+    margin: 10px;
+    font-size: 24px;
+}
